@@ -36,11 +36,8 @@ function published_modified_date($post_id) {
     if ( current_time( 'timestamp', 'local' ) > $unix_modified_date + $interval )
         return true;
     else{
-        if( $unix_modified_date > $unix_published_date + $interval ){
+        if( $unix_modified_date > $unix_published_date + $interval )
             return true;
-        }else{
-            //set_body($post_id, 'Modified');
-        }
     }
 }
 
